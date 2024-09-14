@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
-//Name: Cartoon_Human_Prototype.ma
-//Last modified: Fri, Sep 13, 2024 02:09:19 PM
+//Name: Cartoon_Human_Prototype.0005.ma
+//Last modified: Fri, Sep 13, 2024 07:02:51 PM
 //Codeset: 1252
 requires maya "2024";
 requires "stereoCamera" "10.0";
@@ -12,21 +12,22 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202302170737-4500172811";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "21C06B96-42C5-57FB-4ED6-0CACEDC681B7";
+fileInfo "UUID" "14844BF1-446C-6BAC-5E68-1B92EE3142BC";
+fileInfo "exportedFrom" "C:/Users/kaelr/Git/DAGV 3360/Character-Rigging-24/scenes/Cartoon_Human_Prototype.ma";
 createNode transform -s -n "persp";
 	rename -uid "21C16DF6-45D7-3EC7-D49C-44859AA2A05E";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -4.5501796526041502 25.523993577338548 14.302850365770849 ;
-	setAttr ".r" -type "double3" -41.738352710456034 -1807.3999999985144 0 ;
+	setAttr ".t" -type "double3" -40.414573516203056 34.548674722791802 -6.2679150120982108 ;
+	setAttr ".r" -type "double3" -32.738352710457136 -1900.9999999983061 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "100D60A2-4571-7F98-5367-CE954DCA8523";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 16.181252375867285;
+	setAttr ".coi" 48.898094447363029;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.096616802385350642 17.424953424888056 1.4027779173339243 ;
+	setAttr ".tp" -type "double3" -0.087687015533447266 12.552049160003662 0 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	rename -uid "AA2E7E10-4CF6-CA08-8F8D-728D04C10C57";
@@ -98,6 +99,7 @@ createNode imagePlane -n "imagePlaneShape1" -p "imagePlane1";
 	setAttr ".cs" -type "string" "sRGB";
 createNode transform -n "Human_BaseMesh";
 	rename -uid "498416B1-4F4C-7809-D866-039341CC57FA";
+	setAttr ".v" no;
 	setAttr ".t" -type "double3" -0.096616802385350642 0 0.16015187911050699 ;
 	setAttr ".r" -type "double3" -90 0 0 ;
 	setAttr ".s" -type "double3" 0.1239987132426064 0.1239987132426064 0.1239987132426064 ;
@@ -4280,7 +4282,6 @@ createNode mesh -n "Human_BaseMeshShape" -p "Human_BaseMesh";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "group1";
 	rename -uid "A718EB08-47CF-79B4-5BCD-6B84E6ED7556";
-	setAttr ".v" no;
 createNode transform -n "R_Foot2" -p "group1";
 	rename -uid "91353036-4F3B-C6A3-4BBA-1DBAFFA9EB6F";
 	setAttr ".rp" -type "double3" -2.8148686522816426 7.3924446466932565 0 ;
@@ -8802,6 +8803,7 @@ createNode mesh -n "WaistShape" -p "Waist";
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 createNode transform -n "Body" -p "group1";
 	rename -uid "E654D949-40D7-D027-89E1-17B825FB49F2";
+	setAttr ".s" -type "double3" 1 1 1.4331497080059556 ;
 	setAttr ".rp" -type "double3" -3.7997024059296804 16.914932250976562 0.5 ;
 	setAttr ".sp" -type "double3" -3.7997024059297315 16.914932250976562 0.5 ;
 createNode mesh -n "BodyShape" -p "Body";
@@ -11528,22 +11530,22 @@ createNode camera -n "backShape" -p "back";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "AEE3E66B-4D19-2B91-9A9A-1EBC08A8F00B";
+	rename -uid "614862AE-41DA-8C1F-D389-8CB9B4D4A9D3";
 	setAttr -s 5 ".lnk";
 	setAttr -s 5 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "DDA3969E-4A93-2680-5C37-4B9AEC7622A6";
+	rename -uid "7683D354-4727-2C5C-EAF1-3CBF8B8F4D31";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "C74723E5-407D-264A-C013-259B9C478852";
+	rename -uid "BA33471A-497D-1514-0E7C-A88C48875D20";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "436924EC-4708-6A43-E4AE-D68DF3027DB2";
+	rename -uid "720E699F-473E-9390-5DC5-3AAA3B097C5A";
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "1936130D-40AF-7FA0-2E3B-87A6F060F0E3";
 	setAttr ".ufem" -type "stringArray" 0  ;
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "45F7A83B-4005-E256-41EC-7E88AE41A7D6";
+	rename -uid "2FF7240F-47D9-3204-C3B9-01B1230C56BC";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "C54C25BB-43EB-B2F8-76AE-DFA919387BD7";
 	setAttr ".g" yes;
@@ -11781,8 +11783,6 @@ select -ne :hardwareRenderGlobals;
 	setAttr -k on ".hwcc";
 	setAttr -k on ".hwdp";
 	setAttr -k on ".hwql";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
@@ -11800,10 +11800,6 @@ relationship "shadowLink" ":lightLinker1" "Body_Lores_GEOSG.message" ":defaultLi
 relationship "shadowLink" ":lightLinker1" "Human_BaseMeshSG.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr ":defaultArnoldDisplayDriver.msg" ":defaultArnoldRenderOptions.drivers"
-		 -na;
-connectAttr ":defaultArnoldFilter.msg" ":defaultArnoldRenderOptions.filt";
-connectAttr ":defaultArnoldDriver.msg" ":defaultArnoldRenderOptions.drvr";
 connectAttr "BASEMESH_WHITE.oc" "BaseMesh_Man_Simple_EyeballSG.ss";
 connectAttr "BaseMesh_Man_Simple_EyeballSG.msg" "materialInfo1.sg";
 connectAttr "BASEMESH_WHITE.msg" "materialInfo1.m";
@@ -11853,4 +11849,4 @@ connectAttr "L_HandShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "R_ArmShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "R_HandShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "R_FootShape2.iog" ":initialShadingGroup.dsm" -na;
-// End of Cartoon_Human_Prototype.ma
+// End of Cartoon_Human_Prototype.0005.ma
