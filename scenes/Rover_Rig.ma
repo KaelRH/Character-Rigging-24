@@ -1,6 +1,6 @@
 //Maya ASCII 2024 scene
 //Name: Rover_Rig.ma
-//Last modified: Fri, Nov 15, 2024 11:39:15 PM
+//Last modified: Fri, Nov 15, 2024 11:42:21 PM
 //Codeset: 1252
 requires maya "2024";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "5.3.0";
@@ -10,12 +10,12 @@ fileInfo "product" "Maya 2024";
 fileInfo "version" "2024";
 fileInfo "cutIdentifier" "202302170737-4500172811";
 fileInfo "osv" "Windows 11 Home v2009 (Build: 22631)";
-fileInfo "UUID" "1C801816-46E7-4BB9-F782-0BB52BEE92AA";
+fileInfo "UUID" "3D288128-4B03-8300-9DBB-6CA7DF0409A0";
 createNode transform -s -n "persp";
 	rename -uid "2A998CE9-4783-6AA0-5EF4-EEB65DAB7F93";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 214.91942602084919 -363.64817976935399 171.16650450323115 ;
-	setAttr ".r" -type "double3" 68.482924915716509 -3.1805546814635176e-15 -1061.2050679073534 ;
+	setAttr ".t" -type "double3" -38.539014326750248 -351.21731838315645 195.1576728744389 ;
+	setAttr ".r" -type "double3" 64.882924915716742 0 -1100.0050679073483 ;
 	setAttr ".rp" -type "double3" -5.6843418860808015e-14 -3.5527136788005009e-15 0 ;
 	setAttr ".rpt" -type "double3" 6.3076070180143051e-15 2.957785118580431e-14 -3.5524613157774551e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
